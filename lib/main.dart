@@ -8,14 +8,47 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       home: new Scaffold(
-        body: new Center(         // centers the content of nested widgets
-          child: new Text('Hello World'),  // Displays our message
+        appBar: new AppBar(
+          title: new Text('Flutter is Cool!'),
+          leading: new Icon(Icons.cake),
+          actions: <Widget>[
+            new IconButton(
+                icon: new Icon(Icons.sd_card),
+                tooltip: 'Hey!',
+                onPressed: () => {},
+            ),
+            new IconButton(
+              icon: new Icon(Icons.pie_chart),
+              tooltip: 'Wow',
+              onPressed: () => {},
+            ),
+            new IconButton(
+              icon: new Icon(Icons.photo_album),
+              tooltip: 'Snap!',
+              onPressed: () => {},
+            ),
+          ],
+        ),
+        bottomNavigationBar: new BottomNavigationBar(
+          items: [
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.account_balance),
+                title: new Text("Bank")
+            ),
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.apps),
+                title: new Text("Apps")
+            ),
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.shopping_basket),
+                title: new Text("Shop")
+            ),
+          ]
+        ),
+        body: new Center(
+          child: new Text('Hello World'),
         ),
       ),
     );
   }
-
-  }
-
-
-  // When done hit the Green Arrow above to launch your App.
+}

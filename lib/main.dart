@@ -33,20 +33,47 @@ class MyApp extends StatelessWidget {
           items: [
             new BottomNavigationBarItem(
                 icon: new Icon(Icons.account_balance),
-                title: new Text("Bank")
+                label: "Bank"
             ),
             new BottomNavigationBarItem(
                 icon: new Icon(Icons.apps),
-                title: new Text("Apps")
+                label: "Apps"
             ),
             new BottomNavigationBarItem(
                 icon: new Icon(Icons.shopping_basket),
-                title: new Text("Shop")
+                label: "Shop"
             ),
           ]
         ),
-        body: new Center(
-          child: new Text('Hello World'),
+        body: new Container(
+          padding: const EdgeInsets.all(20.0),
+          child: new Column(
+            children: <Widget>[
+              new Text("Hello World"),
+              new TextField(
+                decoration: new InputDecoration(
+                  border: InputBorder.none,
+                  hintText: 'Enter text here'
+                ),
+              ),
+              new Checkbox(
+                  value: true,
+                  onChanged: (bool value) {
+            // This is where to enter your function for what happens if state is changed
+                  },
+                  ),
+              new Radio<int>(
+                value: 0,
+                groupValue: 0,
+                onChanged: (_){},
+              ),
+              new Switch(
+                  value: false,
+                  onChanged: (bool value){
+                  },
+              )
+            ],
+          ),
         ),
       ),
     );

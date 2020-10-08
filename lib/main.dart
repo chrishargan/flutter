@@ -52,7 +52,8 @@ class MyApp extends StatelessWidget {
                   // This is where to enter your function for what happens if state is changed
                 },
               ),
-              new Radio<int>(
+                 // start of buttons demo
+ /*             new Radio<int>(
                 value: 0,
                 groupValue: 0,
                 onChanged: (_) {},
@@ -96,6 +97,9 @@ class MyApp extends StatelessWidget {
                     child: const Text('Disabled'),
                     onPressed: null, )
                 ],
+              ),*/          // end of Button examples
+              new Image.network(
+                'https://thecatapi.com/api/images/get?formet=src&type=gif',
               ),
             ],
           ),
